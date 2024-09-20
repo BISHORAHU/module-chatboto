@@ -69,6 +69,8 @@ AI Assistant:"""
 
 prompt = PromptTemplate(template=template, input_variables=["chat_history", "input"])
 
+inference_params = dict(temperature=0.7, max_tokens=40000, top_k = 50, top_p= 0.95)
+
 conversation = ConversationChain(
   prompt=prompt,
   llm=llm,
