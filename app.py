@@ -69,7 +69,7 @@ AI Assistant:"""
 
 prompt = PromptTemplate(template=template, input_variables=["chat_history", "input"])
 
-inference_params = dict(temperature=0.7, max_tokens=10000, top_k = 50, top_p= 0.95)
+inference_params = dict(max_tokens=10000)
 
 conversation = ConversationChain(
   prompt=prompt,
